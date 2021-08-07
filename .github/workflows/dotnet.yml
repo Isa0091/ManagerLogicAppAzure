@@ -25,7 +25,7 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     
     - name: Despliegue en nuget de Manager de logic app azure
-      id: publish_nuget_mvc
+      id: publish_nuget_LogiaAppManager
       uses: rohith/publish-nuget@v2
       with:
           # Filepath of the project to be packaged, relative to root of repository
@@ -33,7 +33,7 @@ jobs:
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
      
     - name: Despliegue en nuget de la inyeccionde dependencias del manager de logic app de azure
-      id: publish_nuget_core
+      id: publish_nuget_injectionLogicApp
       uses: rohith/publish-nuget@v2
       with:
           # Filepath of the project to be packaged, relative to root of repository
