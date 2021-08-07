@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+	<Authors>Josue isaias Dominguez</Authors>
+	<Company>Isa0091</Company>
+	 <Version>1.0.0</Version>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/Isa0091/ManagerLogicAppAzure/blob/main/ManagerLogicAppAzure.Injection/ManagerLogicAppAzureExtension.cs</RepositoryUrl>
+    <Description>Maneja la inyeccion de dependencias del manager para las logic app de azure</Description>
   </PropertyGroup>
 
   <ItemGroup>
