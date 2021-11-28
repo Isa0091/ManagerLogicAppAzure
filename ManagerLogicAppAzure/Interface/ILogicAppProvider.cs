@@ -24,8 +24,9 @@ namespace ManagerLogicAppAzure.Interface
         /// <param name="message"></param>
         /// <param name="recurrece"></param>
         /// <param name="weekDays"></param>
+        /// <param name="location">Indica la location utilizada en el resource group ejemp. eastus </param>
         /// <returns></returns>
-        Task<Workflow> CreateOrUpdateLogicAppRecurrenceToSendMessegeAsync(string WorflowLogicAppName, string topic, string resourceGroup, string message,RecurrenceDto recurrence, ConnectionData connectionData);
+        Task<Workflow> CreateOrUpdateLogicAppRecurrenceToSendMessegeAsync(string WorflowLogicAppName, string topic, string resourceGroup, string message, string location, RecurrenceDto recurrence, ConnectionData connectionData);
 
         /// <summary>
         /// Elimina una logic app

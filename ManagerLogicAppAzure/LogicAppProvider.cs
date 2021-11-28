@@ -30,7 +30,7 @@ namespace ManagerLogicAppAzure
             _log = log;
         }
 
-        public async Task<Workflow> CreateOrUpdateLogicAppRecurrenceToSendMessegeAsync(string worflowLogicAppName, string topic, string resourceGroup, string message,RecurrenceDto recurrence, ConnectionData connectionData)
+        public async Task<Workflow> CreateOrUpdateLogicAppRecurrenceToSendMessegeAsync(string worflowLogicAppName, string topic, string resourceGroup, string message,string location, RecurrenceDto recurrence, ConnectionData connectionData)
         {
             ConfigureLogicManagementClient(connectionData);
             string WorkflowDefinition = "";
@@ -39,7 +39,7 @@ namespace ManagerLogicAppAzure
                 Workflow workflow = new Workflow(worflowLogicAppName)
                 {
                     State = WorkflowState.Enabled,
-                    Location = "westus"
+                    Location = location
                 };
                 workflow.Parameters = new Dictionary<string, WorkflowParameter>();
 
